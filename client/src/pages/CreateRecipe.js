@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-//import { useGetUserID } from "../hooks/useGetUserID";
+import { useGetUserID } from "../hooks/useGetUserID";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
 export const CreateRecipe = () => {
- // const userID = useGetUserID();
+  const userID = useGetUserID();
   const [cookies, _] = useCookies(["access_token"]);
   const [recipe, setRecipe] = useState({
     name: "",
@@ -14,7 +14,7 @@ export const CreateRecipe = () => {
     instructions: "",
     imageUrl: "",
     cookingTime: 0,
-    // userOwner: 0,
+     userOwner: userID,
   });
 
   const navigate = useNavigate();
