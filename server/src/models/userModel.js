@@ -1,9 +1,8 @@
 const mongoose=require('mongoose')
-const userSch=mongoose.Schema({
+const userSch=new mongoose.Schema({
 username:{
     type:String,
-    required:true,
-    unique:true
+    required:true
 },
 password:{
 type:String,
@@ -13,4 +12,4 @@ required:true
 
 const mod=mongoose.model('Users',userSch)
 
-module.exports=mod
+module.exports=mod 
