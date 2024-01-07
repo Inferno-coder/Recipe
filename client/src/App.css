@@ -109,6 +109,13 @@ a {
   font-size: 25px;
 }
 
+.create-recipe-wrapper{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 .create-recipe {
   display: flex;
   flex-direction: column;
